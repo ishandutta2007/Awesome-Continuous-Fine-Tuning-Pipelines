@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines" alt="GitHub Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines" alt="License" /></a>
@@ -67,61 +67,61 @@ Managed platforms that streamline data ingestion, automated distributed training
 
 ## 💻 Open-Source GitHub Projects
 
-The leading open-source repositories powering autonomous, self-hosted continuous fine-tuning pipelines. **Sorted by GitHub Stars in descending order.**
+The leading open-source repositories powering autonomous, self-hosted continuous fine-tuning pipelines. **Sorted by GitHub_Stars in descending order.**
 
-1. ### **[vLLM](https://github.com/vllm-project/vllm)** [![GitHub stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers)
+1. ### **[vLLM](https://github.com/vllm-project/vllm)** [![GitHub_Stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers)
    - **High-throughput, memory-efficient serving engine supporting dynamic multi-LoRA adapter swapping.**
    - While primarily recognized as the premier serving runtime with PagedAttention, vLLM's dynamic LoRA loading allows a single production instance to serve dozens of continuously updated, domain-specific adapters over a shared base model without downtime.
 
-2. ### **[Unsloth](https://github.com/unslothai/unsloth)** [![GitHub stars](https://img.shields.io/github/stars/unslothai/unsloth?style=social&color=white)](https://github.com/unslothai/unsloth/stargazers)
+2. ### **[Unsloth](https://github.com/unslothai/unsloth)** [![GitHub_Stars](https://img.shields.io/github/stars/unslothai/unsloth?style=social&color=white)](https://github.com/unslothai/unsloth/stargazers)
    - **The fastest open-source fine-tuning engine for single-GPU environments.**
    - Hand-crafted OpenAI Triton kernels deliver **2×–5× faster training with 40%–70% less VRAM consumption** compared to standard Hugging Face implementations. Seamlessly supports QLoRA, LoRA, Full Fine-Tuning, and Reinforcement Learning (GRPO, DPO). Allows training Llama 3.1 8B on consumer GPUs (e.g. RTX 3060 12GB). Includes native integration with Hugging Face TRL and Trainer.
 
-3. ### **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** [![GitHub stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social&color=white)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
+3. ### **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** [![GitHub_Stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social&color=white)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
    - **Comprehensive, unified web dashboard and CLI framework for 100+ LLMs & VLMs.**
    - Supports continuous pre-training, SFT, reward modeling, PPO, DPO, KTO, and ORPO. Incorporates advanced optimization techniques including GaLore, BAdam, APOLLO, DoRA, LongLoRA, and PiSSA. Features a zero-code Web UI (LLaMA Board) for experiment tracking alongside robust programmatic APIs.
 
-4. ### **[DeepSpeed](https://github.com/microsoft/DeepSpeed)** [![GitHub stars](https://img.shields.io/github/stars/microsoft/DeepSpeed?style=social&color=white)](https://github.com/microsoft/DeepSpeed/stargazers)
+4. ### **[DeepSpeed](https://github.com/microsoft/DeepSpeed)** [![GitHub_Stars](https://img.shields.io/github/stars/microsoft/DeepSpeed?style=social&color=white)](https://github.com/microsoft/DeepSpeed/stargazers)
    - **Microsoft's extreme-scale distributed optimization and training library.**
    - Powers large-scale continuous fine-tuning through ZeRO (Zero Redundancy Optimizer Stages 1, 2, and 3), ZeRO-Offload, 3D parallelism, and mixed-precision acceleration. The industry gold standard for multi-node, cluster-scale model refresh.
 
-5. ### **[Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)** [![GitHub stars](https://img.shields.io/github/stars/tatsu-lab/stanford_alpaca?style=social&color=white)](https://github.com/tatsu-lab/stanford_alpaca/stargazers)
+5. ### **[Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)** [![GitHub_Stars](https://img.shields.io/github/stars/tatsu-lab/stanford_alpaca?style=social&color=white)](https://github.com/tatsu-lab/stanford_alpaca/stargazers)
    - **The seminal instruction-following dataset and fine-tuning recipe.**
    - Laid the foundational blueprint for instruction-tuning open models, generating synthetic alignment datasets, and executing parameter-efficient adaptation routines.
 
-6. ### **[PEFT](https://github.com/huggingface/peft)** [![GitHub stars](https://img.shields.io/github/stars/huggingface/peft?style=social&color=white)](https://github.com/huggingface/peft/stargazers)
+6. ### **[PEFT](https://github.com/huggingface/peft)** [![GitHub_Stars](https://img.shields.io/github/stars/huggingface/peft?style=social&color=white)](https://github.com/huggingface/peft/stargazers)
    - **Hugging Face's official Parameter-Efficient Fine-Tuning library.**
    - The foundational adapter engine providing modular implementations of LoRA, Prefix Tuning, P-Tuning, Prompt Tuning, AdaLoRA, BOFT, and QLoRA. Integrates directly with Transformers, Accelerate, and TRL.
 
-7. ### **[Hugging Face TRL](https://github.com/huggingface/trl)** [![GitHub stars](https://img.shields.io/github/stars/huggingface/trl?style=social&color=white)](https://github.com/huggingface/trl/stargazers)
+7. ### **[Hugging Face TRL](https://github.com/huggingface/trl)** [![GitHub_Stars](https://img.shields.io/github/stars/huggingface/trl?style=social&color=white)](https://github.com/huggingface/trl/stargazers)
    - **Transformer Reinforcement Learning toolkit for end-to-end post-training alignment.**
    - Offers high-level abstractions (`SFTTrainer`, `DPOTrainer`, `GRPOTrainer`, `RewardTrainer`) designed to take base models through supervised adaptation and preference optimization in production pipelines.
 
-8. ### **[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** [![GitHub stars](https://img.shields.io/github/stars/axolotl-ai-cloud/axolotl?style=social&color=white)](https://github.com/axolotl-ai-cloud/axolotl/stargazers)
+8. ### **[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** [![GitHub_Stars](https://img.shields.io/github/stars/axolotl-ai-cloud/axolotl?style=social&color=white)](https://github.com/axolotl-ai-cloud/axolotl/stargazers)
    - **Declarative, YAML-driven fine-tuning framework for reproducible production MLOps.**
    - Allows defining model architectures, dataset paths, LoRA hyperparameters, and training regimes within a single version-controlled configuration file. Supports sequence parallelism, GaLore memory reduction, multi-GPU scaling (DeepSpeed/FSDP), and automated validation routines.
 
-9. ### **[MOSS](https://github.com/OpenLMLab/MOSS)** [![GitHub stars](https://img.shields.io/github/stars/OpenLMLab/MOSS?style=social&color=white)](https://github.com/OpenLMLab/MOSS/stargazers)
+9. ### **[MOSS](https://github.com/OpenLMLab/MOSS)** [![GitHub_Stars](https://img.shields.io/github/stars/OpenLMLab/MOSS?style=social&color=white)](https://github.com/OpenLMLab/MOSS/stargazers)
    - **Conversational foundation model and tool-augmented training framework.**
    - Comprehensive system demonstrating dialog-driven fine-tuning, plugin integration, and alignment workflows.
 
-10. ### **[MLX Examples](https://github.com/ml-explore/mlx-examples)** [![GitHub stars](https://img.shields.io/github/stars/ml-explore/mlx-examples?style=social&color=white)](https://github.com/ml-explore/mlx-examples/stargazers)
+10. ### **[MLX Examples](https://github.com/ml-explore/mlx-examples)** [![GitHub_Stars](https://img.shields.io/github/stars/ml-explore/mlx-examples?style=social&color=white)](https://github.com/ml-explore/mlx-examples/stargazers)
     - **Native Apple Silicon machine learning framework and fine-tuning examples.**
     - High-performance, low-latency fine-tuning leveraging unified Apple Silicon memory architectures without CUDA dependencies.
 
-11. ### **[Snorkel](https://github.com/snorkel-team/snorkel)** [![GitHub stars](https://img.shields.io/github/stars/snorkel-team/snorkel?style=social&color=white)](https://github.com/snorkel-team/snorkel/stargazers)
+11. ### **[Snorkel](https://github.com/snorkel-team/snorkel)** [![GitHub_Stars](https://img.shields.io/github/stars/snorkel-team/snorkel?style=social&color=white)](https://github.com/snorkel-team/snorkel/stargazers)
     - **Programmatic training data creation system powered by weak supervision.**
     - Programmatic labeling functions, generative label models, data slicing, and transformation routines. Essential when continuous retraining requires automated annotation of newly incoming unstructured text.
 
-12. ### **[torchtune](https://github.com/pytorch/torchtune)** [![GitHub stars](https://img.shields.io/github/stars/pytorch/torchtune?style=social&color=white)](https://github.com/pytorch/torchtune/stargazers)
+12. ### **[torchtune](https://github.com/pytorch/torchtune)** [![GitHub_Stars](https://img.shields.io/github/stars/pytorch/torchtune?style=social&color=white)](https://github.com/pytorch/torchtune/stargazers)
     - **PyTorch-native library for easily authoring, fine-tuning, and experimenting with LLMs.**
     - Clean, hackable, modular PyTorch components without layers of obscure abstractions; built-in memory-efficient recipes, distributed training hooks, and quantization support.
 
-13. ### **[XTuner](https://github.com/InternLM/xtuner)** [![GitHub stars](https://img.shields.io/github/stars/InternLM/xtuner?style=social&color=white)](https://github.com/InternLM/xtuner/stargazers)
+13. ### **[XTuner](https://github.com/InternLM/xtuner)** [![GitHub_Stars](https://img.shields.io/github/stars/InternLM/xtuner?style=social&color=white)](https://github.com/InternLM/xtuner/stargazers)
     - **Lightweight, flexible toolkit for fine-tuning LLMs and multimodal agents.**
     - Adaptable to 8GB consumer GPUs with QLoRA; supports FlashAttention, DeepSpeed, and long-context training across diverse open-weights families.
 
-14. ### **[LoRAX](https://github.com/predibase/lorax)** [![GitHub stars](https://img.shields.io/github/stars/predibase/lorax?style=social&color=white)](https://github.com/predibase/lorax/stargazers)
+14. ### **[LoRAX](https://github.com/predibase/lorax)** [![GitHub_Stars](https://img.shields.io/github/stars/predibase/lorax?style=social&color=white)](https://github.com/predibase/lorax/stargazers)
     - **Multi-LoRA serving runtime designed to host hundreds of fine-tuned adapters on a single GPU.**
     - Solves the economic challenge of continuous fine-tuning by dynamically loading adapter weights per request onto a shared foundational backbone.
 
@@ -189,3 +189,12 @@ If this curated repository saved you time, infrastructure budget, or helped stre
 - Continuous fine-tuning pipelines ingesting proprietary enterprise data must adhere to relevant compliance, governance, and privacy frameworks (GDPR, HIPAA, CCPA) and upstream model licenses.
 - Hardware speedups (e.g., Unsloth) are specific to supported NVIDIA GPU architectures and CUDA runtime configurations.
 - Always implement rigorous evaluation gates prior to automated production deployments to prevent degradation and regression.
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Continuous-Fine-Tuning-Pipelines&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Continuous-Fine-Tuning-Pipelines_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Continuous-Fine-Tuning-Pipelines_growth.svg">
+  </picture>
+</a>
