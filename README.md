@@ -30,77 +30,32 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
 
 
+## Sector Overview & Market Dynamics
+
+The global LLM fine-tuning and domain adaptation market is estimated at **$5.9B–$7.4B in 2025** and projected to reach **$7.6B–$9.8B in 2026** (~30%+ CAGR), propelled by enterprise requirements for private, domain-specific models with low hallucination rates. The market dynamics reflect a **moderately fragmented ecosystem transitioning toward a bifurcated structure**: hyperscale cloud providers (AWS, Azure) dominate generic enterprise spend and high-touch governance, while specialized independent AI infrastructure players (Fireworks AI, Together AI, Baseten) capture high-performance developer mindshare via low-latency inference, cutting-edge PEFT/LoRA capabilities, and competitive token-based economics rather than a single winner-take-all monopoly.
+
 ## SaaS/Hosted Platforms
 
-
-
-- **[Predibase](https://predibase.com/)**  
-
-  Developer platform for fine-tuning and serving LLMs with **LoRAX**, an open-source serving framework that hosts multiple LoRA adapters on a single GPU using shared base weights and dynamic adapter loading . **LoRA Land** demonstrated 25 fine-tuned Mistral-7B models served on a single A100 80GB, with 4-bit LoRA models outperforming base models by 34 points and GPT-4 by 10 points on average across 310 models . Offers managed fine-tuning pipelines with evaluation harnesses.
-
-
-
-- **[Together AI](https://www.together.ai/)**  
-
-  Full-stack generative AI platform with managed fine-tuning for Llama, Mistral, Qwen, and other open models. Features LoRA and full fine-tuning with automatic scaling.
-
-
-
-- **[Fireworks AI](https://fireworks.ai/)**  
-
-  Fast inference and fine-tuning platform. Features function calling, structured generation, and custom model deployment with pay-per-token pricing.
-
-
-
-- **[Lamini](https://lamini.ai/)**  
-
-  Enterprise LLM platform focused on fine-tuning with data privacy. Features Lamini Memory Tuning for factual recall and continuous adaptation on proprietary data.
-
-
-
-- **[Anyscale](https://www.anyscale.com/)**  
-
-  Managed Ray platform for distributed training and fine-tuning. Enables scaling from single GPU to multi-node clusters with Ray Train and Ray Tune.
-
-
-
-- **[Baseten](https://baseten.co/)**  
-
-  ML infrastructure platform for model deployment and fine-tuning. Features Truss for model packaging and autoscaling inference.
-
-
-
-- **[OctoAI](https://octoai.cloud/)**  
-
-  Cloud platform for fine-tuning and serving open-source models with optimized inference.
-
-
-
-- **[Snorkel AI](https://snorkel.ai/)**  
-
-  Data development platform built on the open-source Snorkel library . Enterprise **Snorkel Flow** supports programmatic labeling, data curation, model training, and evaluation through Python SDK targeting per-instance REST API . The open-source Snorkel library (Apache-2.0) enables weak supervision with labeling functions, LabelModel, transformation functions, and slicing .
-
-
-
-- **[AWS SageMaker](https://aws.amazon.com/sagemaker/)**  
-
-  Fully managed ML platform with built-in fine-tuning capabilities for foundation models, including SageMaker JumpStart and custom training jobs.
-
-
-
-- **[Azure AI Foundry](https://azure.microsoft.com/en-us/products/ai-foundry)**  
-
-  Microsoft's platform for building, fine-tuning, and deploying AI models with enterprise governance.
+| Platform | Company Size (Valuation / Revenue) | Pricing (Starting Tier / Rates) | Free Tier / Trial Limits | Key Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Azure AI Foundry](https://azure.microsoft.com/en-us/products/ai-foundry)** | **~$4.0 Trillion** market cap (Microsoft) | Pay-as-you-go; fine-tuning compute from ~$1.70/hr deployment hosting + token rates ($0.50+/1M tokens) | **30-day free trial with $200 credits**; fine-tuning requires moving past restricted trial quotas to standard PAYG | Microsoft's enterprise governance platform for model fine-tuning and deployment |
+| **[AWS SageMaker](https://aws.amazon.com/sagemaker/)** | **~$2.8 Trillion** parent cap (~$169B ARR / $1T+ implied valuation) | Pay-as-you-go; training from $0.50/1M tokens (SFT) or $0.70/hr (ml.g5.xlarge GPU compute) | **2-month free tier**: 250 hrs ml.t3.medium notebook, 50 hrs ml.m5.xlarge CPU training, 125 hrs inference (GPUs not included in free tier) | Fully managed ML training, JumpStart model fine-tuning, and scalable compute |
+| **[Fireworks AI](https://fireworks.ai/)** | **~$17.5 Billion** valuation (Series D) / $1B+ ARR | LoRA SFT: **$0.50 / 1M tokens** (<16B models) up to $10.00 / 1M tokens (>300B); Full param SFT: $1.00 / 1M tokens | **$1 one-time sign-up credit** for serverless inference/testing; no permanent free tier | Ultra-fast inference engine, LoRA/DPO fine-tuning, and structured generation |
+| **[Baseten](https://baseten.co/)** | **~$13.0 Billion** valuation (Series F) / ~$600M ARR | Pay-as-you-go ($0/mo platform fee); GPU instances from **$0.30/hr** (T4) and dedicated deployments billed per minute | **$30 free credits** upon workspace registration; up to $25k via Startup Program | Model deployment, Truss packaging, and autoscaling fine-tuned endpoints |
+| **[Together AI](https://www.together.ai/)** | **~$8.3 Billion** valuation (Series C) / $1B+ ARR | Fine-tuning starts at **$0.48 / 1M tokens** (scales by model size/method) + dedicated hosting rates; min $15 initial deposit | **$5–$25 promotional signup credits** (varies by promotion); no permanent free tier | Managed full and LoRA fine-tuning for open models (Llama, Mistral, Qwen) |
+| **[Snorkel AI](https://snorkel.ai/)** | **~$3.5 Billion** valuation (Series E) / ~$375M ARR | Enterprise contracts starting at **~$50,000–$60,000/year** (via AWS Marketplace / direct sales) | **60-day enterprise Proof-of-Concept (POV)** or complimentary custom LLM evaluation report; no self-serve free tier | Programmatic data development, labeling functions, and domain adaptation |
+| **[Anyscale](https://www.anyscale.com/)** | **~$1.65 Billion** acquisition value (by Nscale) | Compute-hour billing from **$0.0135/hr (CPU)** and **$0.5682/hr (T4 GPU)** to $4.9591/hr (A100) | **$100 free compute credits** on registration; sample fine-tuning templates start at ~$3–$5 in compute | Managed Ray platform for distributed multi-GPU training and Ray Train tuning |
+| **[OctoAI](https://octoai.cloud/)** | **~$900 Million** peak valuation (Acquired by Nvidia) | Formerly compute-based / $0.05+/1M tokens; standalone APIs integrated into **NVIDIA NIM** | Standalone cloud service sunsetted; **free prototyping access available via build.nvidia.com** (NVIDIA NIM) | Optimized inference and model fine-tuning, now embedded into Nvidia NIM stack |
+| **[Predibase](https://predibase.com/)** | **~$100M–$250M** valuation (Acquired by Rubrik) | Pay-as-you-go / custom VPC contract; multi-tenant LoRA serving from fractional GPU compute rates | **$25 free platform credits** for developer testing; proof-of-concept trial via sales/AWS marketplace | LoRAX dynamic multi-LoRA serving framework and managed fine-tuning pipelines |
+| **[Lamini](https://lamini.ai/)** | **~$150 Million** valuation (Series A) | **$1.00 per tuning step per GPU**; inference at $0.50 / 1M tokens | **$300 free credits** upon new account creation; refills in $100 increments | Memory Tuning for factual recall, proprietary data adaptation, and privacy |
 
 
 
