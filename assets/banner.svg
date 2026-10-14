@@ -1,0 +1,159 @@
+<svg width="100%" height="240" viewBox="0 0 1200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="neonCyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="neonPurpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f857a6" />
+      <stop offset="100%" stop-color="#ff5858" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <radialGradient id="glowPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filter for glow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Continuous pulse and particle flow animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.08); }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-12px) translateX(15px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+    @keyframes orbitNode {
+      0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+    }
+
+    .bg-grid { stroke: rgba(255, 255, 255, 0.04); stroke-width: 1; }
+    .pulse-layer { transform-origin: 600px 120px; animation: pulseGlow 6s ease-in-out infinite; }
+    .pipeline-wire { stroke-dasharray: 8 12; animation: flowLine 15s linear infinite; }
+    .pipeline-wire-fast { stroke-dasharray: 6 10; animation: flowLine 8s linear infinite; }
+    .p1 { animation: floatParticle 5s ease-in-out infinite; }
+    .p2 { animation: floatParticle 7s ease-in-out infinite 1s; }
+    .p3 { animation: floatParticle 6s ease-in-out infinite 2s; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="240" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="240" rx="16" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5" />
+
+  <!-- Animated Grid -->
+  <g class="bg-grid">
+    <line x1="0" y1="40" x2="1200" y2="40" />
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="160" x2="1200" y2="160" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="150" y1="0" x2="150" y2="240" />
+    <line x1="300" y1="0" x2="300" y2="240" />
+    <line x1="450" y1="0" x2="450" y2="240" />
+    <line x1="600" y1="0" x2="600" y2="240" />
+    <line x1="750" y1="0" x2="750" y2="240" />
+    <line x1="900" y1="0" x2="900" y2="240" />
+    <line x1="1050" y1="0" x2="1050" y2="240" />
+  </g>
+
+  <!-- Background Glowing Aura (Dynamic behind text) -->
+  <circle cx="600" cy="115" r="220" fill="url(#glowPulse)" class="pulse-layer" />
+  <circle cx="150" cy="70" r="100" fill="url(#glowPulse)" class="pulse-layer" style="animation-delay: -2s;" />
+  <circle cx="1060" cy="160" r="120" fill="url(#glowPulse)" class="pulse-layer" style="animation-delay: -4s;" />
+
+  <!-- Dynamic Pipeline Data Streams (Strictly in Background) -->
+  <g opacity="0.45" filter="url(#neonGlow)">
+    <path d="M-50,60 C 250,20 400,100 700,50 C 950,10 1100,80 1250,50" stroke="#00f2fe" stroke-width="2" fill="none" class="pipeline-wire" />
+    <path d="M-50,180 C 200,220 500,140 800,190 C 1000,230 1150,160 1250,190" stroke="#c084fc" stroke-width="2" fill="none" class="pipeline-wire-fast" />
+    <path d="M50,250 C 200,170 350,220 600,180 C 850,140 1000,230 1150,120" stroke="#f857a6" stroke-width="1.5" stroke-dasharray="4 8" fill="none" class="pipeline-wire" />
+  </g>
+
+  <!-- Floating Ambient Particles -->
+  <g class="p1">
+    <circle cx="220" cy="50" r="3" fill="#38bdf8" />
+    <circle cx="980" cy="65" r="3.5" fill="#c084fc" />
+  </g>
+  <g class="p2">
+    <circle cx="110" cy="180" r="2.5" fill="#00f2fe" />
+    <circle cx="1080" cy="195" r="3" fill="#f857a6" />
+    <circle cx="480" cy="30" r="2" fill="#818cf8" />
+  </g>
+  <g class="p3">
+    <circle cx="340" cy="210" r="3" fill="#38bdf8" />
+    <circle cx="850" cy="40" r="2.5" fill="#f43f5e" />
+  </g>
+
+  <!-- FOREGROUND TEXT ELEMENTS (Guaranteed crisp and unobstructed) -->
+  <g id="foreground-content">
+    <!-- Category Pill Tag -->
+    <rect x="445" y="24" width="310" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="460" cy="37" r="4" fill="#38bdf8" />
+    <text x="473" y="41" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.5">CONTINUOUS MODEL ADAPTATION</text>
+
+    <!-- Main Title -->
+    <text x="600" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="900" fill="url(#textGrad)" letter-spacing="0.5">
+      Awesome Continuous Fine-Tuning Pipelines
+    </text>
+
+    <!-- Subtitle / Value Proposition -->
+    <text x="600" y="142" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#f1f5f9" letter-spacing="0.2">
+      Automated Retraining, PEFT/LoRA Workflows &amp; Autonomous Production Refresh
+    </text>
+
+    <!-- Feature Tags Row -->
+    <g transform="translate(230, 175)">
+      <!-- Pill 1: LoRA & PEFT -->
+      <g transform="translate(0, 0)">
+        <rect width="160" height="28" rx="6" fill="#1e293b" fill-opacity="0.8" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1" />
+        <text x="80" y="18" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">⚡ Fast LoRA / PEFT</text>
+      </g>
+      <!-- Pill 2: Continuous Retraining -->
+      <g transform="translate(180, 0)">
+        <rect width="190" height="28" rx="6" fill="#1e293b" fill-opacity="0.8" stroke="rgba(129, 140, 248, 0.4)" stroke-width="1" />
+        <text x="95" y="18" text-anchor="middle" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🔄 Continuous Retraining</text>
+      </g>
+      <!-- Pill 3: Evaluation Gates -->
+      <g transform="translate(390, 0)">
+        <rect width="165" height="28" rx="6" fill="#1e293b" fill-opacity="0.8" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1" />
+        <text x="82" y="18" text-anchor="middle" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🛡️ Evaluation Gates</text>
+      </g>
+      <!-- Pill 4: Production MLOps -->
+      <g transform="translate(575, 0)">
+        <rect width="165" height="28" rx="6" fill="#1e293b" fill-opacity="0.8" stroke="rgba(244, 63, 94, 0.4)" stroke-width="1" />
+        <text x="82" y="18" text-anchor="middle" fill="#f43f5e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🚀 Production MLOps</text>
+      </g>
+    </g>
+  </g>
+</svg>
